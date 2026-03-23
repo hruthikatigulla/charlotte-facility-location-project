@@ -2,7 +2,7 @@
 
 A framework for scoring candidate facility locations by combining demographic demand, road-network accessibility, and competitive saturation into a single bounded, weight-controllable score.
 
-**Paper:** *A Composite Spatial Accessibility Index for Facility Location: Algorithm Benchmark and Application to Grocery Retail* (IEEE conference submission)
+**Paper:** *A Composite Spatial Accessibility Index for Facility Location: Algorithm Benchmark and Application to Grocery Retail*
 
 ## Overview
 
