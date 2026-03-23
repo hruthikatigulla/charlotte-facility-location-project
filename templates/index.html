@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Harris Teeter & Gyms – Site Selection</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+<style>
+  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+  header { background:#006d68; color:#fff; padding:12px 18px; font-weight:700; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,.2); }
+  #map { position:absolute; top:64px; bottom:0; left:360px; right:0; }
+  .panel { position:absolute; top:76px; left:12px; width:330px; background:#fff; padding:14px; border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.12); z-index:1000; }
+  .panel h3 { margin:0 0 12px; }
+  .row { margin-bottom:10px; }
+  input, select { width: 230px; }
+  ol#top-list { padding-left:18px; }
+  .kpi { font-size:13px; line-height:1.35; }
+  .kpi strong { display:inline-block; width:190px; }
+</style>
+</head>
+
+<body>
+<header>Harris Teeter & Gyms – Site Selection</header>
+
+<div class="panel">
+  <div class="row">
+    <label for="facility"><strong>Choose facility</strong></label><br/>
+    <select id="facility">
+      <option value="nash_bjj">Nashville – BJJ</option>
+      <option value="nash_cf">Nashville – CrossFit</option>
+      <option value="charlotte_ht">Charlotte – Harris Teeter</option>
+    </select>
+  </div>
+
+  <h3>Scoring Controls</h3>
+  <div class="row">Radius (miles): <input id="radius" type="number" step="0.5" value="4.0"></div>
+  <div class="row">Beta (distance sensitivity): <input id="beta" type="number" step="0.1" value="2.0"></div>
+  <div class="row">Lambda (competition penalty): <input id="lambda" type="number" step="0.05" value="0.15"></div>
+  <div class="row">K nearest competitors: <input id="K" type="number" step="1" value="3"></div>
+  <div class="row"><button id="recompute" type="button">Recompute</button></div>
+  <hr/>
+  <div><strong>Top-10 Results (Search Zones)</strong></div>
+  <ol id="top-list"></ol>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script>
+const facilityCenters = {
+  "nash_bjj":      [36.1627, -86.7816],
+  "nash_cf":       [36.1627, -86.7816],
+  "charlotte_ht":  [35.2271, -80.8431]
+};
+
+const fmt0  = n => Number.isFinite(n) ? n.toFixed(0)  : "0";
+const fmt2  = n => Number.isFinite(n) ? n.toFixed(2)  : "0.00";
+const money = n => Number.isFinite(n) ? n.toLocaleString(undefined,{maximumFractionDigits:0}) : "0";
+
+/* ---- Map setup ---- */
+const initialFacility = document.getElementById("facility").value;
+const map = L.map("map").setView(facilityCenters[initialFacility], 11);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution: "&copy; OpenStreetMap"
+}).addTo(map);
+
+let htLayer        = null;
+let compLayer      = null;
+let blocksLayer    = null;
+let top10ZoneLayer = null;
+let top10MarkerLayer = null;
+
+// Single layers-control instance — never recreated
+const layersControl = L.control.layers(null, null, {collapsed: false}).addTo(map);
+
+/* ---- helpers to safely add/remove from control ---- */
+function _addOverlay(layer, label) {
+  layersControl.addOverlay(layer, label);
+}
+function _removeOverlay(layer) {
+  if (!layer) return;
+  try { layersControl.removeLayer(layer); } catch(_) {}
+  map.removeLayer(layer);
+}
+
+/* ---- clear scoring layers only (blocks are separate) ---- */
+function clearScoreLayers() {
+  _removeOverlay(htLayer);        htLayer        = null;
+  _removeOverlay(compLayer);      compLayer      = null;
+  _removeOverlay(top10ZoneLayer); top10ZoneLayer = null;
+  _removeOverlay(top10MarkerLayer); top10MarkerLayer = null;
+}
+
+/* ---- load block groups (independent of scoring) ---- */
+let blocksAbort = null;
+
+async function loadBlocks() {
+  // cancel any in-flight blocks request
+  if (blocksAbort) blocksAbort.abort();
+  blocksAbort = new AbortController();
+
+  const facility = document.getElementById("facility").value;
+
+  // remove old blocks layer cleanly
+  if (blocksLayer) {
+    _removeOverlay(blocksLayer);
+    blocksLayer = null;
+  }
+
+  try {
+    const res    = await fetch(`/blocks?facility=${facility}`, { signal: blocksAbort.signal });
+    const geojson = await res.json();
+
+    if (!geojson.features || geojson.features.length === 0) {
+      console.warn("[blocks] Empty FeatureCollection for", facility);
+      return;
+    }
+
+    blocksLayer = L.geoJSON(geojson, {
+      style: {
+        color:       "#1f78b4",
+        weight:      0.5,
+        fillColor:   "#a6cee3",
+        fillOpacity: 0.25
+      },
+      onEachFeature(feature, layer) {
+        const p = feature.properties || {};
+        layer.bindTooltip(`
+          <b>GEOID:</b> ${p.GEOID ?? ""}<br/>
+          <b>Population:</b> ${money(p.population)}<br/>
+          <b>Area (sq mi):</b> ${fmt2(p.area_sqmi)}<br/>
+          <b>Pop / sq mi:</b> ${money(p.pop_per_sqmi)}<br/>
+          <b>Median income:</b> $${money(p.median_income)}
+        `, {sticky: true});
+      }
+    }).addTo(map);
+
+    _addOverlay(blocksLayer, "Block groups (granular)");
+    console.log(`[blocks] Loaded ${geojson.features.length} features for ${facility}`);
+
+  } catch(e) {
+    if (e.name !== "AbortError") console.error("[blocks] Failed:", e);
+  }
+}
+
+/* ---- draw scoring results ---- */
+function draw(payload) {
+  clearScoreLayers();
+
+  // Existing / scored facilities
+  if (payload.ht_scored && payload.ht_scored.length) {
+    htLayer = L.layerGroup(
+      payload.ht_scored.map(ht => {
+        const { lat, lon, score, stores_per_10k, income_med, access_score_dj } = ht;
+        return L.circleMarker([lat, lon], {
+          radius: 5, color: "#00897B", weight: 2, fillColor: "#00A08A", fillOpacity: 0.8
+        }).bindPopup(`
+          <b>Existing facility</b><br/>
+          Score: ${fmt2(score)}<br/>
+          Stores per 10k: ${fmt2(stores_per_10k)}<br/>
+          Median income (5mi): $${money(income_med)}<br/>
+          Dijkstra access: ${fmt2(access_score_dj)}
+        `);
+      })
+    ).addTo(map);
+    _addOverlay(htLayer, "Brand facilities (scored)");
+
+  } else if (payload.existing_ht && payload.existing_ht.length) {
+    htLayer = L.layerGroup(payload.existing_ht.map(
+      ([lat, lon]) => L.circleMarker([lat, lon], {radius:5, color:"#00897B", weight:1})
+                        .bindTooltip("Existing facility")
+    )).addTo(map);
+    _addOverlay(htLayer, "Brand facilities");
+  }
+
+  // Competitors
+  if (payload.competitors && payload.competitors.length) {
+    compLayer = L.layerGroup(payload.competitors.map(
+      ([lat, lon]) => L.circleMarker([lat, lon], {radius:3, color:"#F4511E", weight:1})
+                        .bindTooltip("Competitor")
+    )).addTo(map);
+    _addOverlay(compLayer, "Competitors");
+  }
+
+  // Top-10 search zones
+  const ol = document.getElementById("top-list");
+  ol.innerHTML = "";
+
+  if (payload.top10 && payload.top10.length) {
+    top10ZoneLayer   = L.layerGroup().addTo(map);
+    top10MarkerLayer = L.layerGroup().addTo(map);
+
+    const ZONE_R_M = 1.0 * 1609.344;
+
+    payload.top10.forEach((p, i) => {
+      L.circle([p.lat, p.lon], {
+        radius: ZONE_R_M, interactive: false, bubblingMouseEvents: false
+      }).addTo(top10ZoneLayer);
+
+      const m = L.circleMarker([p.lat, p.lon], {
+        radius: 7, color: "#1565C0", weight: 2, fillOpacity: 0.85
+      }).bindPopup(`
+        <b>Search Zone #${i+1}</b><br/>
+        score: ${fmt2(p.score)}<br/>
+        stores/10k: ${fmt2(p.stores_per_10k)}<br/>
+        median income (5mi): $${money(p.income_med)}<br/>
+        access score (Dijkstra): ${fmt2(p.access_score_dj)}
+      `).bindTooltip(`#${i+1} • score: ${fmt2(p.score)}`, {sticky:true, direction:"top"})
+        .addTo(top10MarkerLayer);
+
+      const li = document.createElement("li");
+      li.innerHTML = `#${i+1} • score=${fmt2(p.score)}<br/>
+        <span class="kpi">
+          <strong>Stores per 10k (5mi):</strong> ${fmt2(p.stores_per_10k)}<br/>
+          <strong>Median income (5mi):</strong> $${money(p.income_med)}<br/>
+          <strong>Dijkstra access score:</strong> ${fmt2(p.access_score_dj)}<br/>
+          <strong>Interpretation:</strong> 1.0-mile search zone
+        </span>`;
+      li.style.marginBottom = "10px";
+      li.addEventListener("mouseenter", () => m.openPopup());
+      ol.appendChild(li);
+
+      m.on("click", () => top10ZoneLayer.bringToFront());
+    });
+
+    _addOverlay(top10ZoneLayer,   "Top-10 Search Zones");
+    _addOverlay(top10MarkerLayer, "Top-10 Points");
+  }
+}
+
+/* ---- recompute (single-flight) ---- */
+let recomputeAbort = null;
+
+async function recompute() {
+  const facility = document.getElementById("facility").value;
+  map.setView(facilityCenters[facility], 11);
+
+  if (recomputeAbort) recomputeAbort.abort();
+  recomputeAbort = new AbortController();
+
+  const body = {
+    facility,
+    radius_miles: parseFloat(document.getElementById("radius").value),
+    beta:         parseFloat(document.getElementById("beta").value),
+    lambda:       parseFloat(document.getElementById("lambda").value),
+    K:            parseInt(document.getElementById("K").value, 10)
+  };
+
+  const btn = document.getElementById("recompute");
+  if (btn) btn.disabled = true;
+
+  try {
+    const res     = await fetch("/recompute", {
+      method:  "POST",
+      headers: {"Content-Type": "application/json"},
+      body:    JSON.stringify(body),
+      signal:  recomputeAbort.signal
+    });
+    const payload = await res.json();
+    if (!payload.ok) { alert(payload.error || "Server error"); return; }
+    draw(payload);
+  } catch(e) {
+    if (e.name === "AbortError") return;
+    try {
+      const q    = new URLSearchParams(body).toString();
+      const res2 = await fetch("/recompute?" + q, { signal: recomputeAbort.signal });
+      const p2   = await res2.json();
+      if (!p2.ok) { alert(p2.error || "Server error"); return; }
+      draw(p2);
+    } catch(e2) {
+      if (e2.name !== "AbortError") console.error(e2);
+    }
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+/* ---- facility change: reload blocks first, then recompute ---- */
+document.getElementById("facility").addEventListener("change", async () => {
+  const facility = document.getElementById("facility").value;
+  map.setView(facilityCenters[facility], 11);
+  await loadBlocks();   // wait for blocks before scoring overlay
+  recompute();
+});
+
+document.getElementById("recompute").addEventListener("click", e => {
+  e.preventDefault();
+  recompute();
+});
+
+/* ---- initial page load: sequential, not concurrent ---- */
+(async () => {
+  await loadBlocks();
+  recompute();
+})();
+</script>
+</body>
+</html>

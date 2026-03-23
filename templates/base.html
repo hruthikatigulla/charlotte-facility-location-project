@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Harris Teeter – Charlotte Expansion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <style>
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    header {
+      background:#006d68; color:#fff; padding:12px 18px;
+      font-weight:700; font-size:22px; letter-spacing:0.2px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    }
+    #map { position: absolute; top:64px; bottom:0; left:340px; right:0; }
+    .panel {
+      position: absolute; top:76px; left:12px; width:310px;
+      background:#fff; padding:14px; border-radius:12px;
+      box-shadow:0 10px 24px rgba(0,0,0,.12);
+      z-index:1000;
+    }
+    .panel h3 { margin:0 0 10px; }
+    .row { margin-bottom:10px; }
+    input { width: 120px; }
+    .kpi { font-size:13px; line-height:1.35; }
+    .kpi strong { display:inline-block; width:160px; }
+    ol#top-list { padding-left:18px; }
+  </style>
+</head>
+<body>
+  <header>Harris Teeter – Charlotte Expansion (Approach 2)</header>
+  {% block content %}{% endblock %}
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
+  <!-- Heat plugin -->
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+</body>
+</html>

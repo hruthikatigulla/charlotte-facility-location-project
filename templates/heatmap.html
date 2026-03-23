@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>HT – Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>.mapbox{height:88vh}</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Top {{ n_top }} candidate locations</h2>
+    <p>Income: {{ '%.2f'|format(params.w_income) }},
+       Access: {{ '%.2f'|format(params.w_access) }},
+       Competition: {{ '%.2f'|format(params.w_comp) }}</p>
+    <div class="mapbox">
+      {{ map_html|safe }}
+    </div>
+    <p><a href="/">← try again</a></p>
+  </div>
+</body>
+</html>
