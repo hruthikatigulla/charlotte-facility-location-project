@@ -1,0 +1,90 @@
+store_id,brand,store_name,address,city,state,zip,role
+HT_01,Harris Teeter,Harris Teeter,3333 Pineville Matthews Rd,Charlotte,NC,28226,validation
+HT_02,Harris Teeter,Harris Teeter,15007 John J Delaney Dr,Charlotte,NC,28277,validation
+HT_03,Harris Teeter,Harris Teeter,4821 Berewick Town Center Dr,Charlotte,NC,28278,validation
+HT_04,Harris Teeter,Harris Teeter,9720 Rea Rd,Charlotte,NC,28277,validation
+HT_05,Harris Teeter,Harris Teeter,9641 Brookdale Dr,Charlotte,NC,28215,validation
+HT_06,Harris Teeter,Harris Teeter,1704 Central Ave,Charlotte,NC,28205,validation
+HT_07,Harris Teeter,Harris Teeter,2720 W Mallard Creek Church Rd,Charlotte,NC,28262,validation
+HT_08,Harris Teeter,Harris Teeter,7823 Colony Rd,Charlotte,NC,28226,validation
+HT_09,Harris Teeter,Harris Teeter,112 S Sharon Amity Rd,Charlotte,NC,28211,validation
+HT_10,Harris Teeter,Harris Teeter,325 W 6th St,Charlotte,NC,28202,validation
+HT_11,Harris Teeter,Harris Teeter,5810 Highland Shoppes Dr,Charlotte,NC,28269,validation
+HT_12,Harris Teeter,Harris Teeter,1227 East Blvd,Charlotte,NC,28203,validation
+HT_13,Harris Teeter,Harris Teeter,5706 Wyalong Dr,Charlotte,NC,28227,validation
+HT_14,Harris Teeter,Harris Teeter,6701 Carnegie Blvd,Charlotte,NC,28211,validation
+HT_15,Harris Teeter,Harris Teeter,1015 Providence Rd,Charlotte,NC,28207,validation
+HT_16,Harris Teeter,Harris Teeter,4100 Carmel Rd,Charlotte,NC,28226,validation
+HT_17,Harris Teeter,Harris Teeter,4101 Park Rd,Charlotte,NC,28209,validation
+HT_18,Harris Teeter,Harris Teeter,5030 Park Rd,Charlotte,NC,28209,validation
+HT_19,Harris Teeter,Harris Teeter,10616 Providence Rd,Charlotte,NC,28277,validation
+HT_20,Harris Teeter,Harris Teeter,8538 Park Rd,Charlotte,NC,28210,validation
+HT_21,Harris Teeter,Harris Teeter,11135 Golf Links Dr,Charlotte,NC,28277,validation
+HT_22,Harris Teeter,Harris Teeter,4701 Smith Farm Rd,Charlotte,NC,28216,validation
+HT_23,Harris Teeter,Harris Teeter,1621 Sardis Rd N,Charlotte,NC,28270,validation
+HT_24,Harris Teeter,Harris Teeter,2717 South Blvd,Charlotte,NC,28209,validation
+HT_25,Harris Teeter,Harris Teeter,16625 Lancaster Hwy,Charlotte,NC,28277,validation
+HT_26,Harris Teeter,Harris Teeter,13000 S Tryon St,Charlotte,NC,28278,validation
+HT_27,Harris Teeter,Harris Teeter,7852 Rea Rd,Charlotte,NC,28277,validation
+HT_28,Harris Teeter,Harris Teeter,8445 Davis Lake Pkwy,Charlotte,NC,28269,validation
+HT_29,Harris Teeter,Harris Teeter,8600 University City Blvd,Charlotte,NC,28213,validation
+FL_01,Food Lion,Food Lion,10120 Johnston Rd,Charlotte,NC,,competitor
+FL_02,Food Lion,Food Lion,1620 Ashley Rd,Charlotte,NC,,competitor
+FL_03,Food Lion,Food Lion,704 Harris Houston Rd,Charlotte,NC,,competitor
+FL_04,Food Lion,Food Lion,2123 Beatties Ford Rd,Charlotte,NC,,competitor
+FL_05,Food Lion,Food Lion,2201 West W.T. Harris Blvd,Charlotte,NC,,competitor
+FL_06,Food Lion,Food Lion,2226 Park Rd,Charlotte,NC,,competitor
+FL_07,Food Lion,Food Lion,237 Mt Holly-Huntersville Rd,Charlotte,NC,,competitor
+FL_08,Food Lion,Food Lion,2526 Little Rock Rd,Charlotte,NC,,competitor
+FL_09,Food Lion,Food Lion,2931 E W.T. Harris Blvd,Charlotte,NC,,competitor
+FL_10,Food Lion,Food Lion,3009 The Plaza,Charlotte,NC,,competitor
+FL_11,Food Lion,Food Lion,3207 Eastway Dr,Charlotte,NC,,competitor
+FL_12,Food Lion,Food Lion,4001 Sunset Rd W,Charlotte,NC,,competitor
+FL_13,Food Lion,Food Lion,4709 Tuckaseegee Rd,Charlotte,NC,,competitor
+FL_14,Food Lion,Food Lion,5624 N Graham St,Charlotte,NC,,competitor
+FL_15,Food Lion,Food Lion,5831 South Blvd,Charlotte,NC,,competitor
+FL_16,Food Lion,Food Lion,6430 W Sugar Creek Rd,Charlotte,NC,,competitor
+FL_17,Food Lion,Food Lion,7004 E W.T. Harris Blvd,Charlotte,NC,,competitor
+FL_18,Food Lion,Food Lion,7400 Candlewyck Ln,Charlotte,NC,,competitor
+FL_19,Food Lion,Food Lion,7400 The Plaza,Charlotte,NC,,competitor
+FL_20,Food Lion,Food Lion,8010 Cambridge Commons Dr,Charlotte,NC,,competitor
+FL_21,Food Lion,Food Lion,8100 Idlewild Rd,Charlotte,NC,,competitor
+FL_22,Food Lion,Food Lion,8138 Mt Holly-Huntersville Rd,Charlotte,NC,,competitor
+FL_23,Food Lion,Food Lion,9021 Albemarle Rd,Charlotte,NC,,competitor
+FL_24,Food Lion,Food Lion,9112 S Tryon St,Charlotte,NC,,competitor
+FL_25,Food Lion,Food Lion,9115 Samlen Ln,Charlotte,NC,,competitor
+FL_26,Food Lion,Food Lion,931 N Wendover Rd,Charlotte,NC,,competitor
+FL_27,Food Lion,Food Lion,9323 N Tryon St,Charlotte,NC,,competitor
+FL_28,Food Lion,Food Lion,9848 Monroe Rd,Charlotte,NC,,competitor
+PB_01,Publix,Publix,10110 Benfield Rd,Charlotte,NC,28269.0,competitor
+PB_02,Publix,Publix,5015 Weddington Rd,Concord,NC,28027.0,competitor
+PB_03,Publix,Publix,2222 South Blvd,Charlotte,NC,28203.0,competitor
+PB_04,Publix,Publix,12925 Albemarle Rd,Charlotte,NC,28227.0,competitor
+PB_05,Publix,Publix,6828 Matthews-Mint Hill Rd,Mint Hill,NC,28227.0,competitor
+PB_06,Publix,Publix,4425 Randolph Rd,Charlotte,NC,28211.0,competitor
+PB_07,Publix,Publix,4135 S Stream Blvd,Charlotte,NC,28217.0,competitor
+PB_08,Publix,Publix,8120 S Tryon St,Charlotte,NC,28273.0,competitor
+PB_09,Publix,Publix,7933 Providence Rd,Charlotte,NC,28277.0,competitor
+PB_10,Publix,Publix,3110 Fincher Farm Rd,Matthews,NC,28105.0,competitor
+PB_11,Publix,Publix,11525 Carmel Commons Blvd,Charlotte,NC,28226.0,competitor
+PB_12,Publix,Publix,11222 Providence Rd W,Charlotte,NC,28277.0,competitor
+PB_13,Publix,Publix,1615 Providence Rd S,Marvin,NC,28173.0,competitor
+PB_14,Publix,Publix,12810 S Tryon St,Charlotte,NC,28273.0,competitor
+LF_01,Lowes Foods,Lowes Foods,2415 Herrons Nest Pl NW,Concord,NC,28027.0,competitor
+LF_02,Lowes Foods,Lowes Foods,4445 School House Commons,Harrisburg,NC,28075.0,competitor
+LF_03,Lowes Foods,Lowes Foods,14021 Boren St,Huntersville,NC,28078.0,competitor
+AL_01,ALDI,ALDI,10629 Park Rd,Charlotte,NC,28210.0,competitor
+AL_02,ALDI,ALDI,10710 South Tryon St,Charlotte,NC,28273.0,competitor
+AL_03,ALDI,ALDI,2526 Freedom Dr,Charlotte,NC,28208.0,competitor
+AL_04,ALDI,ALDI,4006 Connection Point Blvd,Charlotte,NC,28212.0,competitor
+AL_05,ALDI,ALDI,4120 Sunset Rd,Charlotte,NC,28216.0,competitor
+AL_06,ALDI,ALDI,5550 Old Pineville Rd,Charlotte,NC,28217.0,competitor
+AL_07,ALDI,ALDI,5817 Prosperity Church Rd,Charlotte,NC,28269.0,competitor
+AL_08,ALDI,ALDI,6454 Albemarle Rd,Charlotte,NC,28212.0,competitor
+AL_09,ALDI,ALDI,9609 N Tryon St,Charlotte,NC,28262.0,competitor
+LD_01,Lidl,Lidl,8930 Christenbury Pkwy,Concord,NC,28027.0,competitor
+LD_02,Lidl,Lidl,615 W Mallard Creek Church Rd,Charlotte,NC,28262.0,competitor
+LD_03,Lidl,Lidl,4520 Margaret Wallace Rd,Matthews,NC,28105.0,competitor
+LD_04,Lidl,Lidl,9318 Monroe Rd,Charlotte,NC,28270.0,competitor
+LD_05,Lidl,Lidl,11200 Carmel Commons Blvd,Charlotte,NC,28226.0,competitor
+LD_06,Lidl,Lidl,11225 S Tryon St,Charlotte,NC,28273.0,competitor

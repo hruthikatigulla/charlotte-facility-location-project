@@ -1,0 +1,881 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-10-24T00:25:59Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3302698302",
+        "addr:housenumber": "931",
+        "brand": "Food Lion",
+        "brand:wikidata": "Q1435950",
+        "name": "Food Lion",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7970173,
+          35.192216
+        ]
+      },
+      "id": "node/3302698302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3313311530",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "4100",
+        "addr:postcode": "28226",
+        "addr:state": "NC",
+        "addr:street": "Carmel Road",
+        "branch": "Olde Towne Village",
+        "brand": "Harris Teeter",
+        "brand:wikidata": "Q5665067",
+        "name": "Harris Teeter",
+        "opening_hours": "Mo-Su 06:00-22:00",
+        "phone": "+1 704-542-6228",
+        "ref": "09700294",
+        "shop": "supermarket",
+        "website": "https://www.harristeeter.com/stores/grocery/nc/charlotte/olde-towne-village/097/00294",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8244806,
+          35.1169711
+        ]
+      },
+      "id": "node/3313311530"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3313321881",
+        "brand": "The Fresh Market",
+        "brand:wikidata": "Q7735265",
+        "name": "The Fresh Market",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8485697,
+          35.0865293
+        ]
+      },
+      "id": "node/3313321881"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3324011206",
+        "name": "US Foods",
+        "shop": "supermarket",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7831361,
+          35.2110959
+        ]
+      },
+      "id": "node/3324011206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3324011218",
+        "name": "Atlantic Farmers Market",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7827728,
+          35.2132095
+        ]
+      },
+      "id": "node/3324011218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3324098659",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "112",
+        "addr:postcode": "28211",
+        "addr:state": "NC",
+        "addr:street": "South Sharon Amity Road",
+        "branch": "Cotswold",
+        "brand": "Harris Teeter",
+        "brand:wikidata": "Q5665067",
+        "name": "Harris Teeter",
+        "opening_hours": "Mo-Su 06:00-23:00",
+        "phone": "+1 704-366-5684",
+        "ref": "0970020809",
+        "shop": "supermarket",
+        "website": "https://www.harristeeter.com/stores/grocery/nc/charlotte/cotswold/097/00208"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8008962,
+          35.1772917
+        ]
+      },
+      "id": "node/3324098659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3904982009",
+        "contact:yelp": "http://www.yelp.com/biz/international-supermarket-charlotte",
+        "name": "International Supermarket",
+        "opening_hours": "09:00-20:00",
+        "phone": "(704) 509-1799",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7911023,
+          35.2574032
+        ]
+      },
+      "id": "node/3904982009"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5270325448",
+        "brand": "Food Lion",
+        "brand:wikidata": "Q1435950",
+        "name": "Food Lion",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.9404665,
+          35.1344948
+        ]
+      },
+      "id": "node/5270325448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5339979351",
+        "name": "Compare Foods",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8849439,
+          35.2363629
+        ]
+      },
+      "id": "node/5339979351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5354981330",
+        "name": "Handpicked",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8059471,
+          35.0349967
+        ]
+      },
+      "id": "node/5354981330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6530620102",
+        "brand": "Save-A-Lot",
+        "brand:wikidata": "Q7427972",
+        "name": "Save-A-Lot",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8009471,
+          35.3016676
+        ]
+      },
+      "id": "node/6530620102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6597473896",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "2050",
+        "addr:postcode": "28206",
+        "addr:state": "NC",
+        "addr:street": "North Graham Street",
+        "name": "Wayne's Super Market",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8292532,
+          35.2471716
+        ]
+      },
+      "id": "node/6597473896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7041152015",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "6418",
+        "addr:postcode": "28277",
+        "addr:state": "NC",
+        "addr:street": "Rea Road",
+        "branch": "Charlotte - Piper Glen",
+        "brand": "Trader Joe's",
+        "brand:wikidata": "Q688825",
+        "name": "Trader Joe's",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "phone": "+1 704-543-5249",
+        "ref": "742",
+        "shop": "supermarket",
+        "website": "https://locations.traderjoes.com/nc/charlotte/742/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8178677,
+          35.0787316
+        ]
+      },
+      "id": "node/7041152015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7527984717",
+        "name": "Compare Foods Supermarket",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8931845,
+          35.1340151
+        ]
+      },
+      "id": "node/7527984717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7813652128",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "2222",
+        "addr:postcode": "28203",
+        "addr:state": "NC",
+        "addr:street": "South Boulevard",
+        "branch": "Shops at Southline",
+        "brand": "Publix",
+        "brand:wikidata": "Q672170",
+        "name": "Publix",
+        "opening_hours": "Mo-Su 06:30-23:00",
+        "phone": "+1 704-373-2122",
+        "ref": "1453",
+        "shop": "supermarket",
+        "website": "https://www.publix.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8623296,
+          35.206608
+        ]
+      },
+      "id": "node/7813652128"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7813767486",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "2717",
+        "addr:postcode": "28209",
+        "addr:state": "NC",
+        "addr:street": "South Boulevard",
+        "branch": "Sedgefield",
+        "brand": "Harris Teeter",
+        "brand:wikidata": "Q5665067",
+        "name": "Harris Teeter",
+        "opening_hours": "Mo-Su 06:00-23:00",
+        "phone": "+1 704-527-1018",
+        "ref": "0970030509",
+        "shop": "supermarket",
+        "website": "https://www.harristeeter.com/stores/grocery/nc/charlotte/sedgefield/097/00305"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8656497,
+          35.2006718
+        ]
+      },
+      "id": "node/7813767486"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7824536650",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "11135",
+        "addr:postcode": "28277",
+        "addr:state": "NC",
+        "addr:street": "Golf Links Drive",
+        "branch": "Rea Farms",
+        "brand": "Harris Teeter",
+        "brand:wikidata": "Q5665067",
+        "name": "Harris Teeter",
+        "opening_hours": "Mo-Su 06:00-23:00",
+        "phone": "+1 704-303-8601",
+        "ref": "0970044009",
+        "shop": "supermarket",
+        "website": "https://www.harristeeter.com/stores/grocery/nc/charlotte/rea-farms/097/00440"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7725146,
+          35.0518162
+        ]
+      },
+      "id": "node/7824536650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7926302494",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "2526",
+        "addr:postcode": "28214",
+        "addr:state": "NC",
+        "addr:street": "Little Rock Road",
+        "brand": "Food Lion",
+        "brand:wikidata": "Q1435950",
+        "name": "Food Lion",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.9384801,
+          35.2452949
+        ]
+      },
+      "id": "node/7926302494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8067309794",
+        "addr:city": "Huntersville",
+        "addr:housenumber": "9548",
+        "addr:postcode": "28078",
+        "addr:state": "NC",
+        "addr:street": "Mount Holly-Huntersville Road",
+        "brand": "Food Lion",
+        "brand:wikidata": "Q1435950",
+        "name": "Food Lion",
+        "payment:american_express": "yes",
+        "payment:cash": "yes",
+        "payment:coins": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8675625,
+          35.3567907
+        ]
+      },
+      "id": "node/8067309794"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8098877319",
+        "brand": "Food Lion",
+        "brand:wikidata": "Q1435950",
+        "name": "Food Lion",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8559042,
+          35.264187
+        ]
+      },
+      "id": "node/8098877319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9180394562",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "1133",
+        "addr:postcode": "28204",
+        "addr:state": "NC",
+        "addr:street": "Metropolitan Avenue",
+        "branch": "Charlotte",
+        "brand": "Trader Joe's",
+        "brand:wikidata": "Q688825",
+        "level": "1",
+        "name": "Trader Joe's",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "phone": "+1 704-334-0737",
+        "ref": "744",
+        "shop": "supermarket",
+        "website": "https://locations.traderjoes.com/nc/charlotte/744/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8354251,
+          35.2118382
+        ]
+      },
+      "id": "node/9180394562"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9409070903",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "1704",
+        "addr:postcode": "28213",
+        "addr:state": "NC",
+        "addr:street": "Harris Houston Road",
+        "brand": "Food Lion",
+        "brand:wikidata": "Q1435950",
+        "name": "Food Lion",
+        "ref": "985",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6998667,
+          35.3149676
+        ]
+      },
+      "id": "node/9409070903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9644783817",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "5831",
+        "addr:postcode": "28210",
+        "addr:state": "NC",
+        "addr:street": "South Boulevard",
+        "brand": "Food Lion",
+        "brand:wikidata": "Q1435950",
+        "name": "Food Lion",
+        "opening_hours": "Mo-Su 07:00-22:00",
+        "shop": "supermarket",
+        "website": "https://stores.foodlion.com/nc/charlotte/5831-south-blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8750527,
+          35.1558982
+        ]
+      },
+      "id": "node/9644783817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9710455961",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "818",
+        "addr:postcode": "28217",
+        "addr:state": "NC",
+        "addr:street": "East Arrowood Rd",
+        "name": "Compare Foods",
+        "opening_hours": "Mo-Su 07:00-22:00",
+        "phone": "(704) 716-1170",
+        "shop": "supermarket",
+        "website": "https://www.compareclt.com/stores/compare-foods-e-arrowood"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8782927,
+          35.1356103
+        ]
+      },
+      "id": "node/9710455961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9809916146",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "7823",
+        "addr:postcode": "28226",
+        "addr:state": "NC",
+        "addr:street": "Colony Road",
+        "branch": "Colony Place",
+        "brand": "Harris Teeter",
+        "brand:wikidata": "Q5665067",
+        "name": "Harris Teeter",
+        "opening_hours": "Mo-Su 06:00-22:00",
+        "phone": "+1 704-341-3688",
+        "ref": "09700004",
+        "shop": "supermarket",
+        "website": "https://www.harristeeter.com/stores/grocery/nc/charlotte/colony-place/097/00004"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.806589,
+          35.1064397
+        ]
+      },
+      "id": "node/9809916146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9913478729",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "325",
+        "addr:postcode": "28202",
+        "addr:state": "NC",
+        "addr:street": "West 6th Street",
+        "branch": "Fifth and Poplar",
+        "brand": "Harris Teeter",
+        "brand:wikidata": "Q5665067",
+        "name": "Harris Teeter",
+        "opening_hours": "Mo-Su 06:00-23:00",
+        "phone": "+1 704-332-8479",
+        "ref": "09700205",
+        "shop": "supermarket",
+        "website": "https://www.harristeeter.com/stores/grocery/nc/charlotte/fifth-and-poplar/097/00205"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8438879,
+          35.2311074
+        ]
+      },
+      "id": "node/9913478729"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11578840172",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "11525",
+        "addr:postcode": "28226-5317",
+        "addr:state": "NC",
+        "addr:street": "Carmel Commons Boulevard",
+        "branch": "Carmel Commons",
+        "brand": "Publix",
+        "brand:wikidata": "Q672170",
+        "name": "Publix",
+        "opening_hours": "Mo-Su 07:00-22:00",
+        "ref": "2017",
+        "shop": "supermarket",
+        "website": "https://www.publix.com/locations/2017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8438908,
+          35.0867471
+        ]
+      },
+      "id": "node/11578840172"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11630959044",
+        "name": "Reid's Fine Foods",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8392942,
+          35.1744431
+        ]
+      },
+      "id": "node/11630959044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11648968547",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "400",
+        "addr:postcode": "28202",
+        "addr:state": "NC",
+        "addr:street": "East Brooklyn Village Avenue",
+        "branch": "Uptown Charlotte",
+        "brand": "Whole Foods Market",
+        "brand:wikidata": "Q1809448",
+        "check_date": "2024-10-03",
+        "check_date:opening_hours": "2024-10-03",
+        "name": "Whole Foods Market",
+        "opening_hours": "Mo-Su 08:00-22:00",
+        "phone": "+1 704-969-5950",
+        "ref": "uptowncharlotte",
+        "shop": "supermarket",
+        "website": "https://www.wholefoodsmarket.com/stores/uptowncharlotte"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8465278,
+          35.2212955
+        ]
+      },
+      "id": "node/11648968547"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11813196973",
+        "name": "Compare Foods",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8750583,
+          35.160228
+        ]
+      },
+      "id": "node/11813196973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12038381452",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "1830",
+        "addr:state": "NC",
+        "addr:street": "Galleria Boulevard",
+        "name": "Walmart at the Galleria",
+        "payment:app:walmart": "yes",
+        "payment:apple_pay": "no",
+        "payment:google_pay": "no",
+        "payment:samsung_pay": "no",
+        "sensory_friendly:accommodation": "dimmed_light;static_screens;no_pa",
+        "sensory_friendly:conditional": "yes @ 08:00-10:00",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7327048,
+          35.1387596
+        ]
+      },
+      "id": "node/12038381452"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12290315935",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "6610",
+        "addr:postcode": "28210",
+        "addr:state": "NC",
+        "addr:street": "Fairview Road",
+        "branch": "Charlotte",
+        "brand": "Whole Foods Market",
+        "brand:wikidata": "Q1809448",
+        "building": "yes",
+        "check_date": "2024-10-03",
+        "check_date:opening_hours": "2024-10-03",
+        "name": "Whole Foods Market",
+        "opening_hours": "Mo-Su 08:00-22:00",
+        "phone": "+1 980-213-2400",
+        "ref": "charlotte",
+        "shop": "supermarket",
+        "website": "https://www.wholefoodsmarket.com/stores/charlotte"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8301397,
+          35.1472695
+        ]
+      },
+      "id": "node/12290315935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12290315937",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "7221",
+        "addr:postcode": "28277",
+        "addr:state": "NC",
+        "addr:street": "Waverly Walk Avenue",
+        "branch": "Waverly",
+        "brand": "Whole Foods Market",
+        "brand:wikidata": "Q1809448",
+        "building": "yes",
+        "check_date": "2024-10-03",
+        "check_date:opening_hours": "2024-10-03",
+        "name": "Whole Foods Market",
+        "opening_hours": "Mo-Su 08:00-22:00",
+        "phone": "+1 704-949-1860",
+        "ref": "waverly",
+        "shop": "supermarket",
+        "website": "https://www.wholefoodsmarket.com/stores/waverly"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7673038,
+          35.0532788
+        ]
+      },
+      "id": "node/12290315937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12425522025",
+        "name": "Mas X Menos Supermarket",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8754693,
+          35.1735083
+        ]
+      },
+      "id": "node/12425522025"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12795758089",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "2920",
+        "addr:postcode": "28205",
+        "addr:state": "NC",
+        "addr:street": "Central Avenue",
+        "addr:unit": "A",
+        "name": "Mega Market",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7945197,
+          35.2177049
+        ]
+      },
+      "id": "node/12795758089"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12984983388",
+        "brand": "Patel Brothers",
+        "brand:wikidata": "Q55641396",
+        "cuisine": "indian",
+        "name": "Patel Brothers",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7511103,
+          35.2948012
+        ]
+      },
+      "id": "node/12984983388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13002602458",
+        "addr:city": "Charlotte",
+        "addr:housenumber": "110",
+        "addr:postcode": "28206",
+        "addr:state": "NC",
+        "addr:street": "East 36th Street",
+        "addr:unit": "5",
+        "brand": "Sprouts Farmers Market",
+        "brand:wikidata": "Q7581369",
+        "name": "Sprouts Farmers Market",
+        "shop": "supermarket",
+        "short_name": "Sprouts",
+        "website": "https://www.sprouts.com/store/nc/charlotte/e-36th-street/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.808291,
+          35.2520323
+        ]
+      },
+      "id": "node/13002602458"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13025457455",
+        "brand": "Aldi",
+        "brand:wikidata": "Q41171672",
+        "name": "Aldi",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7391791,
+          35.3172685
+        ]
+      },
+      "id": "node/13025457455"
+    }
+  ]
+}

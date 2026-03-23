@@ -5,9 +5,11 @@ cache/
 benchmark_cache/
 results/
 
-data/
 atlanta_data/
 nashville_data/
+
+data/atlanta_roads_drive.geojson
+data/la_roads_drive.geojson
 
 .env
 .DS_Store
